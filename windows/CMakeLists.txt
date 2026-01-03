@@ -8,6 +8,7 @@ cmake_minimum_required(VERSION 3.14)
 # MSB8052 during `flutter build windows`.
 if(MSVC)
   set(CMAKE_VS_PLATFORM_TOOLSET "v145" CACHE STRING "" FORCE)
+  set(CMAKE_GENERATOR_TOOLSET   "v145" CACHE STRING "" FORCE)
 endif()
 
 project(colegiosoftware LANGUAGES CXX)

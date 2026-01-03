@@ -36,5 +36,10 @@ target_link_libraries(${BINARY_NAME} PRIVATE flutter flutter_wrapper_app)
 target_link_libraries(${BINARY_NAME} PRIVATE "dwmapi.lib")
 target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
 
+# Silenciar warning LNK4099 (PDB faltante en librerías precompiladas)
+if(MSVC)
+  target_link_options(${BINARY_NAME} PRIVATE "/ignore:4099")
+endif()
+
 # Run the Flutter tool portions of the build. This must not be removed.
 add_dependencies(${BINARY_NAME} flutter_assemble)

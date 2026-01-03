@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861358488174",
+    "project_id": "colegiosoftwaremr",
+    "storage_bucket": "colegiosoftwaremr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861358488174:android:52e6d50d8aa89516a3047f",
+        "android_client_info": {
+          "package_name": "com.example.colegiosoftware"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB21aqIhuZ56rPOXM3qinXGd4lEXHthZnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

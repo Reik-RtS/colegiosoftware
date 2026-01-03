@@ -2,6 +2,14 @@
 cmake_minimum_required(VERSION 3.14)
 project(colegiosoftware LANGUAGES CXX)
 
+# Visual Studio toolset compatibility
+# MSBuild 17.14 (MSVC 14.50) requires the v145 toolset instead of the
+# previously defaulted v143. Explicitly select v145 to avoid toolset
+# mismatch errors when generating Windows builds.
+if(MSVC)
+  set(CMAKE_VS_PLATFORM_TOOLSET "v145" CACHE STRING "" FORCE)
+endif()
+
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "colegiosoftware")

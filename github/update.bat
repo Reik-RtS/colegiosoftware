@@ -1,6 +1,6 @@
 @echo off
 echo ===============================
-echo 🔄 Actualizando GitHub Repo
+echo Actualizando GitHub Repo ...
 echo ===============================
 
 cd /d F:\development\flutter\colegiosoftware
@@ -11,6 +11,6 @@ git commit -m "update %date% %time%"
 git push
 
 echo ===============================
-echo ✅ Repo actualizado correctamente
+echo Repo actualizado correctamente!
 echo ===============================
 pause

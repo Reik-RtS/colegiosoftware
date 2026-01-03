@@ -1,14 +1,16 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(colegiosoftware LANGUAGES CXX)
 
-# Visual Studio toolset compatibility
-# MSBuild 17.14 (MSVC 14.50) requires the v145 toolset instead of the
-# previously defaulted v143. Explicitly select v145 to avoid toolset
-# mismatch errors when generating Windows builds.
+# Visual Studio toolset compatibility must be configured before the first
+# `project()` call so that all generated MSBuild projects respect it. MSBuild
+# 17.14 (MSVC 14.50) requires the v145 toolset instead of the previously
+# defaulted v143; explicitly select v145 to avoid mismatch errors like
+# MSB8052 during `flutter build windows`.
 if(MSVC)
   set(CMAKE_VS_PLATFORM_TOOLSET "v145" CACHE STRING "" FORCE)
 endif()
+
+project(colegiosoftware LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.

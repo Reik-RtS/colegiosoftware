@@ -13,6 +13,12 @@ endif()
 
 project(colegiosoftware LANGUAGES CXX)
 
+# Enforce a platform toolset compatible with the installed MSVC version to avoid
+# build failures such as MSB8052 when newer toolsets are present.
+if (MSVC)
+  set(CMAKE_VS_PLATFORM_TOOLSET "v145" CACHE STRING "MSVC platform toolset" FORCE)
+endif()
+
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "colegiosoftware")
